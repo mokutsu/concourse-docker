@@ -17,8 +17,13 @@ jobs:
             - name: concourse-docs-git
           platform: darwin
           run:
-    path: /bin/bash
-    args:
-      - -c
-      - |
-        echo "=== Setting up Postgres..."
+            path: /bin/bash
+            args:
+              - -c
+              - |
+                echo "=== Setting up Postgres..."
+                cd /Users/misato/projects/2019sandbox/Concentration
+                git checkout test-branch
+                cat new-file
+                ls -lart
+                xcodebuild
