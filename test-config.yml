@@ -1,0 +1,24 @@
+resources:
+  - name: concourse-docs-git
+    type: git
+    icon: github-circle
+    source:
+      uri: https://github.com/concourse/docs
+
+jobs:
+  - name: job
+    public: true
+    plan:
+      - get: concourse-docs-git
+        trigger: true
+      - task: list-files
+        config:
+          inputs:
+            - name: concourse-docs-git
+          platform: darwin
+          run:
+    path: /bin/bash
+    args:
+      - -c
+      - |
+        echo "=== Setting up Postgres..."

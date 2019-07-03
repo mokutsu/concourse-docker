@@ -1,0 +1,1 @@
+ sudo concourse worker --work-dir /usr/local/concourse/work_dir --tsa-host 127.0.0.1:2222 --tsa-public-key ./keys/worker/tsa_host_key.pub --tsa-worker-private-key ./keys/worker/worker_key

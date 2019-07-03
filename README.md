@@ -1,3 +1,18 @@
+# changes / to do
+1. clone the docker-concourse starter files, modify docker-compose configuration per tutorial:
+- docker-concourse: https://github.com/concourse/concourse-docker
+- tutorial: https://qiita.com/slave125/items/38a156d4f2efd891e6e5#concourse-ci%E3%81%AE%E7%92%B0%E5%A2%83%E6%A7%8B%E7%AF%89mac%E7%B7%A8
+
+2. add .env configs
+3. run generate-keys script per docker-concourse 
+4. docker-compose up
+5. install concourse for mac from releases https://github.com/concourse/concourse/releases (Do not use docker-based release here)
+6. run start-darwin.sh (confirm concourse install is in right folder and same with working dir)
+7. login to fly
+8. make sure ci has 2 workers (linux and darwin) with `fly -t mytarget workers`
+9. set pipeline to test config to make sure git reference works and running with darwin worker works.
+
+
 # Concourse Docker
 
 This Docker image simply packages up the official `concourse` binary and
